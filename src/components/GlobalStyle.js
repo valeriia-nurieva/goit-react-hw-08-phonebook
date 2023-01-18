@@ -18,9 +18,13 @@ code {
 ul {
   list-style: none;
   text-decoration: none;
-
   padding: 0;
   margin: 0;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
 }
 
 h1,
