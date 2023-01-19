@@ -10,10 +10,10 @@ const ContactList = () => {
   return (
     <List>
       {contacts.length > 0 &&
-        filteredContacts.map(({ id, name, phone }) => {
+        filteredContacts.map(({ id, name, number }) => {
           return (
             <Item key={id}>
-              <ContactItem name={name} id={id} number={phone} />
+              <ContactItem name={name} id={id} number={number} />
             </Item>
           );
         })}

@@ -2,17 +2,15 @@ import Navigation  from 'components/Navigation';
 import AuthNav from 'components/NavLink/NavLink';
 import UserMenu from 'components/UserMenu';
 import { HeaderStyled } from './AppBar.styled';
-// import { useAuth } from 'hooks';
+import { useAuth } from 'hooks';
 
 const AppBar = () => {
-//   const { isLoggedIn } = useAuth();
+  const { isLoggedIn } = useAuth();
 
   return (
     <HeaderStyled>
-          <Navigation />
-          <UserMenu /> 
-          <AuthNav />
-      {/* {isLoggedIn ? <UserMenu /> : <AuthNav />} */}
+      <Navigation />
+      {isLoggedIn ? <UserMenu /> : <AuthNav />}
     </HeaderStyled>
   );
 };

@@ -12,7 +12,7 @@ const Title = styled.h1`
   margin-bottom: ${({ theme }) => `${theme.spacing(3)}`};
 `;
 
-export const Contacts = () => {
+const Contacts = () => {
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
   const dispatch = useDispatch();
@@ -32,3 +32,5 @@ export const Contacts = () => {
     </>
   );
 };
+
+export default Contacts;
