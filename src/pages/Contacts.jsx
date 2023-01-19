@@ -22,7 +22,6 @@ const Contacts = () => {
   }, [dispatch]);
   return (
     <>
-      <Title>Phonebook</Title>
       <Form />
       <Title as="h2">Contacts</Title>
       <Filter />

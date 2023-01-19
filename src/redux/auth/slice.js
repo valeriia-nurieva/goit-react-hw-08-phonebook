@@ -20,18 +20,14 @@ const logOutFulfilledReducer = state => {
     state.isLoggedIn = false;
 };
 
-const refreshUserPendingReducer = state => {
-    state.isRefreshing = true;
-};
-
 const refreshUserFulfilledReducer = (state, action) => {
     state.user = action.payload;
     state.isLoggedIn = true;
     state.isRefreshing = false;
 };
 
-const refreshUserRejectedReducer = state => {
-    state.isRefreshing = false;
+const refreshUserToggleReducer = state => {
+    state.isRefreshing = !state.isRefreshing;
 };
 
 const authSlice = createSlice({
@@ -42,9 +38,9 @@ const authSlice = createSlice({
             .addCase(register.fulfilled, registerFulfilledReducer)
             .addCase(logIn.fulfilled, registerFulfilledReducer)
             .addCase(logOut.fulfilled, logOutFulfilledReducer)
-            .addCase(refreshUser.pending, refreshUserPendingReducer)
+            .addCase(refreshUser.pending, refreshUserToggleReducer)
             .addCase(refreshUser.fulfilled, refreshUserFulfilledReducer)
-            .addCase(refreshUser.rejected, refreshUserRejectedReducer)
+            .addCase(refreshUser.rejected, refreshUserToggleReducer)
     },
 });
 
