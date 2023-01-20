@@ -1,15 +1,16 @@
-import { NavLink } from 'react-router-dom';
+import { NavLinkStyled } from "./NavLink.styled";
+import { Box } from "components/Box";
 
 const AuthNav = () => {
   return (
-    <div>
-      <NavLink to="/register">
+    <Box display='flex' gridGap='16px'>
+      <NavLinkStyled to="/register">
         Register
-      </NavLink>
-      <NavLink to="/login">
+      </NavLinkStyled>
+      <NavLinkStyled to="/login">
         Log In
-      </NavLink>
-    </div>
+      </NavLinkStyled>
+    </Box>
   );
 };
 

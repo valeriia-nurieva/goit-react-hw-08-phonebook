@@ -6,9 +6,14 @@ export const Loader = () => {
       height="80"
       width="80"
       radius="48"
-      color="#2196f3"
+      color="#F943FD"
       ariaLabel="watch-loading"
-      wrapperStyle={{}}
+      wrapperStyle={{
+        position: 'fixed',
+        top: '50%',
+        left: ' 50%',
+        transform: 'translate(-50%, -50%)',
+      }}
       wrapperClassName=""
       visible={true}
     />

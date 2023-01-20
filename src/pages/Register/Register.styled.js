@@ -5,12 +5,14 @@ export const FormStyled = styled.form`
   flex-direction: column;
   margin-bottom: ${({ theme }) => `${theme.spacing(6)}`};
   width: 400px;
+  margin: 0 auto;
 `
 
 export const FormLabel = styled.label`
   display: flex;
   flex-direction: column;
   margin-bottom: ${({ theme }) => `${theme.spacing(4)}`};
+  color: ${({ theme }) => `${theme.colors.white}`};
 `
 
 export const FormInput = styled.input`
@@ -21,6 +23,7 @@ export const FormInput = styled.input`
   font-size: ${({theme})=>`${theme.fontSizes[2]}`};
   outline: none;
   margin-top: ${({ theme }) => `${theme.spacing(1)}`};
+  border: none;
 `
 
 export const Button = styled.button`
@@ -36,8 +39,9 @@ export const Button = styled.button`
   background-color: ${({ theme }) => `${theme.colors.accent}`};
   color: ${({ theme }) => `${theme.colors.white}`};
   font-size: inherit;
+  margin: 0 auto;
   cursor: pointer;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3250ms;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 250ms;
   :hover,
   :focus {
     background-color: ${({ theme }) => `${theme.colors.hover}`};
