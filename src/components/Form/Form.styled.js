@@ -25,6 +25,7 @@ export const FormInput = styled.input`
   outline: none;
   margin-top: ${({ theme }) => `${theme.spacing(1)}`};
   border: none;
+  background-color: rgb(255 255 255 / 50%);
 `
 
 export const Button = styled.button`
