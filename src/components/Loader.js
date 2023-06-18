@@ -1,5 +1,4 @@
 import { Watch } from 'react-loader-spinner';
-import { height } from 'styled-system';
 
 export const Loader = () => {
   return (
