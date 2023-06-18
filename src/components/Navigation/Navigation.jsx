@@ -1,5 +1,5 @@
 import { useAuth } from 'hooks';
-import { NavLinkStyled } from './Navigation.styled';
+import { NavLinkStyled } from 'components/NavLink/NavLink.styled';
 import { Box } from "components/Box";
 
 const Navigation = () => {

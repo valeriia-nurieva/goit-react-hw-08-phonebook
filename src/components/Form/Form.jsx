@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import toast, { Toaster } from 'react-hot-toast';
+import { MdPersonAdd } from 'react-icons/md';
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
 import { FormStyled, FormLabel, FormInput, Button } from './Form.styled';
 
-const Form = () => {
+const Form = ({ onClickAdd }) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -36,6 +37,7 @@ const Form = () => {
         })
       );
       reset();
+      onClickAdd();
     }
   };
 
@@ -70,7 +72,9 @@ const Form = () => {
           onChange={handleChange}
         />
       </FormLabel>
-      <Button type="submit">Add contact</Button>
+      <Button type="submit">
+        <MdPersonAdd color="currentColor" size="24px" />
+      </Button>
       <Toaster />
     </FormStyled>
   );

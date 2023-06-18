@@ -1,12 +1,13 @@
 import { Watch } from 'react-loader-spinner';
+import { height } from 'styled-system';
 
 export const Loader = () => {
   return (
     <Watch
-      height="80"
-      width="80"
+      height="40"
+      width="40"
       radius="48"
-      color="#F943FD"
+      color="rgb(255 255 255 / 85%)"
       ariaLabel="watch-loading"
       wrapperStyle={{
         position: 'fixed',

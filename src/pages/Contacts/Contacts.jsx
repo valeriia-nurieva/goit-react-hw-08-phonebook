@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import Form from '../../components/Form';
+import AddContactForm from 'components/AddContactForm';
 import ContactList from '../../components/ContactList';
 import Filter from '../../components/Filter';
 import { Loader } from 'components/Loader';
@@ -15,9 +15,10 @@ const Contacts = () => {
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
+
   return (
     <>
-      <Form />
+      <AddContactForm/>
       <Filter />
       {isLoading && !error && <Loader />}
       {error && <p>{error}</p>}
