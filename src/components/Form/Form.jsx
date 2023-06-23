@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import { MdPersonAdd } from 'react-icons/md';
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
@@ -75,7 +75,6 @@ const Form = ({ onClickAdd }) => {
       <Button type="submit">
         <MdPersonAdd color="currentColor" size="24px" />
       </Button>
-      <Toaster />
     </FormStyled>
   );
 };

@@ -4,6 +4,12 @@ import { addContact, fetchContacts, deleteContact } from './operations';
 const extraActions = [addContact, fetchContacts, deleteContact];
 const getActions = type => isAnyOf(...extraActions.map(action => action[type]));
 
+const initialState = {
+  items: [],
+  isLoading: false,
+  error: null,
+};
+
 const handlePending = state => {
   state.isLoading = true;
 };
@@ -35,11 +41,7 @@ const deleteContactFulfilledReducer = (state, action) => {
 
 const contactsSlice = createSlice({
   name: 'contacts',
-  initialState: {
-    items: [],
-    isLoading: false,
-    error: null,
-  },
+  initialState,
   extraReducers: builder => {
     builder
       .addCase(fetchContacts.fulfilled, fetchContactsFulfilledReducer)

@@ -1,45 +1,42 @@
+import { Form, Field } from 'formik';
 import styled from 'styled-components';
-import bg from "img/bg.png";
+import bg from 'img/bg.png';
 
 export const Section = styled.section`
   padding-top: 40px;
-  min-height: calc(100vh - 75px);
+  min-height: calc(100vh - 76px);
   background-image: url(${bg});
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-`
+`;
 
-export const FormStyled = styled.form`
+export const FormStyled = styled(Form)`
   display: flex;
   flex-direction: column;
   margin-bottom: ${({ theme }) => `${theme.spacing(6)}`};
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-`
+`;
 
 export const FormLabel = styled.label`
   display: flex;
   flex-direction: column;
   margin-bottom: ${({ theme }) => `${theme.spacing(4)}`};
   color: ${({ theme }) => `${theme.colors.white}`};
-`
+`;
 
-export const FormInput = styled.input`
+export const FormInput = styled(Field)`
   padding: ${({ theme }) => `${theme.spacing(2)}`};
   border-radius: ${({ theme }) => `${theme.spacing(1)}`};
   font-family: sans-serif;
-  font-size: ${({theme})=>`${theme.fontSizes[2]}`};
   outline: none;
   margin-top: ${({ theme }) => `${theme.spacing(1)}`};
   border: none;
-  color: ${({ theme }) => `${theme.colors.black}`}; 
+  color: ${({ theme }) => `${theme.colors.white}`};
   background-color: rgb(255 255 255 / 15%);
-  &:focus {
-    background-color: ${({ theme }) => `${theme.colors.white}`}; 
-  }
-`
+`;
 
 export const Button = styled.button`
   display: inline-flex;
@@ -61,4 +58,9 @@ export const Button = styled.button`
   :focus {
     background-color: ${({ theme }) => `${theme.colors.accentPink}`};
   }
+`;
+
+export const ErrorText = styled.p`
+  color: ${({ theme }) => `${theme.colors.red}`};
+  margin-bottom: ${({ theme }) => `${theme.spacing(3)}`};
 `;

@@ -4,6 +4,7 @@ export const theme = Object.freeze({
         black: '#0d0a0a',
         hover: '#1976d2',
         accentPink: '#F26B6D',
+        red: '#fb3235',
         green: '#00bb00',
     },
     spacing: value => `${4 * value}px`,

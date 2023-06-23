@@ -1,6 +1,7 @@
 import { useEffect, lazy } from 'react';
 import { useDispatch } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 import Layout from 'components/Layout/Layout';
 import GlobalStyle from '../GlobalStyle';
 import { PrivateRoute } from 'components/PrivateRoute';
@@ -52,7 +53,8 @@ const App = () => {
             }
           />
         </Route>
-      </Routes>
+        </Routes>
+              <Toaster />
       <GlobalStyle />
     </>
   );

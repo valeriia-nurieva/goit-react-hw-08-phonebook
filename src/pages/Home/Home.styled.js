@@ -3,7 +3,7 @@ import bg from "img/bg.png";
 
 export const Hero = styled.section` 
     padding-top: 84px;
-    min-height: calc(100vh - 75px);
+    min-height: calc(100vh - 76px);
     background-image: url(${bg});
     background-repeat: no-repeat;
     background-position: center;
