@@ -61,6 +61,6 @@ export const Button = styled.button`
 `;
 
 export const ErrorText = styled.p`
-  color: ${({ theme }) => `${theme.colors.accentPink}`};
+  color: ${({ theme }) => `${theme.colors.red}`};
   margin-bottom: ${({ theme }) => `${theme.spacing(3)}`};
 `;
